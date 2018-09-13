@@ -1,8 +1,11 @@
-$action-blue: #0064FF;
-$white: #FFFFFF;
-$disable-gray: #bdbdbd;
-$light-gray: #fafafa;
-$link-color: #4169e1;
+$action-blue: #4169e1;
+$white: #ffffff;
+$link-color: #0000ff;
+$darkest: #384250;
+$lightest: #99b5dc;
+$mid-light: #6d819d;
+$mid-mid: #647690;
+$mid-dark: #526176;
 $small: 400px;
 $medium: 550px;
 
@@ -19,7 +22,7 @@ body {
     padding: 12px 18px;
     margin: 5px;
     font-size: 14px;
-    background-color: $white;
+    background-color: $lightest;
     border: 1px solid $action-blue;
     color: $action-blue;
     border-radius: 20px;
@@ -36,9 +39,9 @@ body {
 }
 .disablebtn {
     @extend.btn;
-    border: $disable-gray;
-    color: $light-gray;
-    background-color: $disable-gray;
+    border: $mid-light;
+    color: $lightest;
+    background-color: $mid-light;
     opacity: .5;
 }
 .link {
@@ -49,7 +52,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    border: 1px solid $disable-gray;
+    border: 1px solid $mid-mid;
     border-radius: 5px;
-    box-shadow: -15px, 15px, $disable-gray; 
 }
