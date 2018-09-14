@@ -1,13 +1,14 @@
 $action-blue: #4169e1;
 $white: #ffffff;
 $link-color: #0000ff;
-$darkest: #384250;
-$lightest: #99b5dc;
-$mid-light: #6d819d;
-$mid-mid: #647690;
-$mid-dark: #526176;
+$darkest: #012547;
+$lightest: #02d3df;
+$mid-light: #04c4dc;
+$mid-mid: #069ec1;
+$mid-dark: #024a71;
 $small: 400px;
 $medium: 550px;
+$pad: 10px;
 
 *{
     box-sizing: border-box;
@@ -17,6 +18,47 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: $darkest;
+}
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $mid-mid;
+    min-width: 100px;
+}
+nav {
+    display: flex;
+    a{
+        padding: $pad 0;
+    }
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.page {
+    width: 80%;
+}
+.header, .footer {
+    background-image: url("https://vignette.wikia.nocookie.net/central/images/8/85/20161028-technology-top-image.jpg/revision/latest?cb=20170621111104");
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: $pad;
+    color: $white;
 }
 .btn {
     padding: 12px 18px;
@@ -48,10 +90,23 @@ body {
     color: $link-color;
     text-decoration: none;
 }
+.main {
+    display: flex;
+}
 .container {
     display: flex;
+    background-color: $mid-light;
+    border: 1px solid $mid-dark;
+    margin: $pad;
+    border-radius: 10px;
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}
+.content {
     flex-direction: column;
-    padding: 20px;
-    border: 1px solid $mid-mid;
-    border-radius: 5px;
+    padding: $pad;
+    background-color: $lightest;
 }
