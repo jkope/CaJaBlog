@@ -92,3 +92,7 @@ nav {
   flex-direction: column;
   padding: 10px;
   background-color: #02d3df; }
+
+.hobtitle {
+  font-size: 30px;
+  text-align: center; }
