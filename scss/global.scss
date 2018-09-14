@@ -10,6 +10,7 @@ $small: 400px;
 $medium: 550px;
 $pad: 10px;
 $smsize: 600px;
+$radius: 15px;
 
 *{
     box-sizing: border-box;
@@ -50,7 +51,7 @@ nav {
     width: 1200px;
     margin: ($pad*10) auto;
 }
-.header, .footer {
+.bar {
     background-image: url("https://vignette.wikia.nocookie.net/central/images/8/85/20161028-technology-top-image.jpg/revision/latest?cb=20170621111104");
     background-size: cover;
     height: 100px;
@@ -61,6 +62,14 @@ nav {
     align-items: center;
     color: $white;
 }
+.header {
+    @extend .bar;
+    border-radius: $radius $radius 0 0;
+}
+.footer {
+    @extend .bar;
+    border-radius: 0 0 $radius $radius;
+}
 .grade {
     background: -webkit-linear-gradient(bottom, rgba(6,158,193,1) 0%,rgba(6,158,193,0) 60%,rgba(6,158,193,0) 72%,rgba(6,158,193,0) 100%);
     width: 100%;
@@ -68,6 +77,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .gradeb {
     @extend .grade;
@@ -107,6 +117,7 @@ nav {
 }
 .main {
     display: flex;
+    border-radius: $radius;
 }
   @media only screen and (max-width: $smsize) {
         .main {
@@ -114,18 +125,23 @@ nav {
         .side {
             flex-direction: row;}
         nav {
-            flex-direction: row;}
-        .social {
-            flex-direction: row;
+            flex-flow: row wrap;
+            a{
+            margin: $pad;
+            }
         }
-    }
-
+        .social {
+            flex-flow: row wrap;}
+        .page {
+            margin: 0;}
+        }
+    
 .container {
     display: flex;
     background-color: $mid-light;
     border: 1px solid $mid-dark;
     margin: $pad;
-    border-radius: 10px;
+    border-radius: $radius;
     img {
         width: 100px;
         height: 100px;
@@ -135,8 +151,12 @@ nav {
         margin: $pad;
     }
 }
+.light {
+    background-color: $mid-mid;
+}
 .content {
     flex-direction: column;
     padding: $pad;
     background-color: $lightest;
+    border-radius: $radius;
 }
