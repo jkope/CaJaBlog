@@ -127,15 +127,13 @@ nav {
         nav {
             flex-flow: row wrap;
             a{
-            margin: $pad;
+            margin: $pad;}
             }
-        }
         .social {
             flex-flow: row wrap;}
         .page {
             margin: 0;}
-        }
-    
+    }
 .container {
     display: flex;
     background-color: $mid-light;
